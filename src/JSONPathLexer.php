@@ -101,7 +101,7 @@ class JSONPathLexer
                 continue;
             }
 
-            if ($char === '[') {
+            if ($char === '[' && $inBracketQuote === null) {
                 $squareBracketDepth++;
 
                 if ($squareBracketDepth === 1) {

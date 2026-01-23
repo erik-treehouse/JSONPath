@@ -219,6 +219,13 @@ class JSONPathLexerTest extends TestCase
             ],
         ];
 
+        yield 'quoted index preserves brackets and dollar signs' => [
+            '$[\'[$the.size$]\']',
+            [
+                ['type' => TokenType::Index, 'value' => '[$the.size$]', 'quoted' => true],
+            ],
+        ];
+
         yield 'query result expression' => [
             '[(@.foo + 2)]',
             [

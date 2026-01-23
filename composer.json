@@ -2,7 +2,7 @@
   "name": "softcreatr/jsonpath",
   "description": "JSONPath implementation for parsing, searching and flattening arrays",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     {
       "name": "Stephen Frank",

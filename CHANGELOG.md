@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.2
+- Fixed tokenizer handling for quoted bracket keys containing `$` so literals like `['[$the.size$]']` remain atomic and do not split into root tokens.
+
 ### 1.0.1
 - Aligned the query runner and lexer with the JSONPath comparison suite: JSON documents are now decoded as objects to preserve `{}` vs `[]`, unsupported selectors no longer abort the runner, and dot-notation now accepts quoted keys with dots/spaces/leading `@`.
 - Hardened filter parsing: boolean-only filters (`?(true|false|null)`), literal short-circuiting (`&& false`, `|| true`), and empty filters now return the expected collections instead of throwing.
